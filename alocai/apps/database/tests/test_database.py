@@ -17,5 +17,5 @@ class TestDatabaseApi(BaseTestCase):
         """Test if connection is successful"""
 
         response = self.client.get(self.database_connection_url, format="json")
-        response_data =  json.loads(response.content)
-        self.assertEqual(response_data['message'], {"database": "healthy"})
+        response_data = json.loads(response.content)
+        self.assertEqual(response_data["message"], {"database": "healthy"})

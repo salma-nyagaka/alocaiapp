@@ -13,4 +13,3 @@ class BaseTestCase(TestCase):
 
         # Access urls for testing
         self.database_connection_url = reverse("database-connection")
-        

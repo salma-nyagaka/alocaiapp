@@ -1,7 +1,6 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, status, viewsets
 from rest_framework.response import Response
-from ...helpers.renderers import RequestJSONRenderer
 
 
 class DatabaseConnectionApiView(generics.GenericAPIView):
@@ -17,4 +16,9 @@ class DatabaseConnectionApiView(generics.GenericAPIView):
         # except:
         #     data = {"database": "unhealthy"}
         #     return_message = {"message": data}
+<<<<<<< HEAD
         #     return Response(return_message, status=status.HTTP_400_BAD_REQUEST)
+=======
+        #     return Response(return_message,
+        # status=status.HTTP_400_BAD_REQUEST)
+>>>>>>> 4adb187 (code cleanup)
