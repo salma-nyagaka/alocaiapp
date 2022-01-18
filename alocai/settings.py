@@ -96,14 +96,25 @@ WSGI_APPLICATION = 'alocai.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'alocai',
+#         'USER': 'alocai',
+#         'PASSWORD': 'alocai',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'alocai',
-        'USER': 'alocai',
-        'PASSWORD': 'alocai',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': os.getenv("DB_NAME", ''),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'USER': os.getenv('DB_USER', ''),
+        'PORT': os.getenv('DB_PORT', ''),
+        'HOST': os.getenv("DB_HOST", '')
 
     }
 }
