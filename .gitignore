@@ -8,7 +8,7 @@ Explore
 @salma-nyagaka 
 salma-nyagaka
 /
-alocai
+# alocai
 Public
 Code
 Issues
@@ -154,6 +154,8 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+data/
+
 # Pyre type checker
 .pyre/
 © 2022 GitHub, Inc.
@@ -170,4 +172,3 @@ Blog
 About
 Loading complete
 
-data/
