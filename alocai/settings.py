@@ -110,11 +110,11 @@ WSGI_APPLICATION = 'alocai.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME", ''),
-        'PASSWORD': os.getenv('DB_PASSWORD', ''),
-        'USER': os.getenv('DB_USER', ''),
-        'PORT': os.getenv('DB_PORT', ''),
-        'HOST': os.getenv("DB_HOST", '')
+        'NAME': os.getenv("DATABASE_NAME", ''),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD', ''),
+        'USER': os.getenv('DATABASE_USER', ''),
+        'PORT': os.getenv('DATABASE_PORT', ''),
+        'HOST': os.getenv("DATABASE_HOST", '')
 
     }
 }
