@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'alocai.docs',
     'rest_framework',
     'drf_yasg',
 
@@ -98,10 +97,10 @@ WSGI_APPLICATION = 'alocai.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_NAME'),
-        'USER': os.environ.get('POSTGRES_USER'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'HOST': 'db',
+        'NAME': 'alocai',
+        'USER': 'alocai',
+        'PASSWORD': 'alocai',
+        'HOST': 'localhost',
         'PORT': '5432',
 
     }
