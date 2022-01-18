@@ -1,7 +1,6 @@
 [![Build Status](https://app.travis-ci.com/salma-nyagaka/alocaiapp.svg?branch=develop)](https://app.travis-ci.com/salma-nyagaka/alocaiapp)
 [![Coverage Status](https://coveralls.io/repos/github/salma-nyagaka/alocaiapp/badge.svg?branch=develop)](https://coveralls.io/github/salma-nyagaka/alocaiapp?branch=develop)
 
-
 ## Alocai backend recruitment task
 A Video Game  application
 
