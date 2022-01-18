@@ -7,9 +7,10 @@ services:
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_NAME=alocai
-      - POSTGRES_USER=alocai
-      - POSTGRES_PASSWORD=alocai
+      - DATABASE_NAME=alocai
+      - DATABASE_USER=alocai
+      - DATABASE_PASSWORD=alocai
+      - DATABASE_HOST=db
   web:
     restart: always
     build: .
@@ -19,8 +20,9 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - POSTGRES_NAME=alocai
-      - POSTGRES_USER=alocai
-      - POSTGRES_PASSWORD=alocai
+      - DATABASE_NAME=alocai
+      - DATABASE_USER=alocai
+      - DATABASE_PASSWORD=alocai
+      - DATABASE_HOST=db
     depends_on:
       - db
