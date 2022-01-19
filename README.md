@@ -45,14 +45,11 @@ A Django web application that ....
     ```
  
  #### Base url
- 
-    ```
     http://alocai.sapplication.link/swagger/
-    ```
 
  #### Endpoints
 | REQUEST | DESCRIPTION  | URL  |
 | :-----: | :-: | :-: |
-| GET | Get DB connection status |  http://{{BASE_URL}}}}/api/v1/status |
-| GET | Get documentation|  http://{{BASE_URL}}}}/docs |
-| POST | Create games|  http://{{BASE_URL}}}}/api/v1/games |
+| GET | Get DB connection status |  {{BASE_URL}}}}/api/v1/status |
+| GET | Get documentation|  {{BASE_URL}}}}/docs |
+| POST | Create games|  {{BASE_URL}}}}/api/v1/games |
