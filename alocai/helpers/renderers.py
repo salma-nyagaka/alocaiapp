@@ -12,10 +12,6 @@ class RequestJSONRenderer(JSONRenderer):
 
         # Checks if our status code is successful
         if status_code == 200 or status_code == 201:
-            print(data, "kkkkkkkkkkkkkkkkkkkk")
-            # import pdb
-
-            # pdb.set_trace()
             return json.dumps({
                 'status': True,
                 'message': data.get('message', None),
