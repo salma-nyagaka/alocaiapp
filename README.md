@@ -5,7 +5,7 @@
 A Video Game  application
 
 ### Description
-A Django web application that ....
+A Django web application that tests db connection, creates games and gets the highest value of games that can be store in a pen drive
 
 ### Link to the documentation
  [Documentation](http://alocai.sapplication.link/docs/)
