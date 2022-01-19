@@ -53,3 +53,5 @@ A Django web application that tests db connection, creates games and gets the hi
 | GET | Get DB connection status |  {{BASE_URL}}}}/api/v1/status |
 | GET | Get documentation|  {{BASE_URL}}}}/docs |
 | POST | Create games|  {{BASE_URL}}}}/api/v1/games |
+| GET | Get game values|  {{BASE_URL}}}}/api/v1/best_value_games?pen_drive_space={POSITIVE_INTEGER} |
+
