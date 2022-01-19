@@ -8,7 +8,7 @@ A Video Game  application
 A Django web application that ....
 
 ### Link to the documentation
-| http://alocai.sapplication.link/swagger/ |
+ [Documentation](http://alocai.sapplication.link/swagger/)
 
 ### Development set up
 
