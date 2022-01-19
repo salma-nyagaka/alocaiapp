@@ -20,7 +20,7 @@ A Django web application that ....
 -   Check that Docker is installed:
 
     ```
-    python --version
+    docker --version
     >> Docker  20.10.12
     ```
 
@@ -47,6 +47,5 @@ A Django web application that ....
 | REQUEST | DESCRIPTION  | URL  |
 | :-----: | :-: | :-: |
 | GET | Get DB connection status |  http://{{BASE_URL}}}}/api/v1/status |
-| GET | Get DB connection status |  http://{{BASE_URL}}}}/api/v1/status |
 | GET | Get documentation|  http://{{BASE_URL}}}}/docs |
-| GET | Get games|  http://{{BASE_URL}}}}/api/v1/games |
+| POST | Create games|  http://{{BASE_URL}}}}/api/v1/games |

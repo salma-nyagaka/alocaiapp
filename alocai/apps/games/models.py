@@ -10,4 +10,4 @@ class Game(models.Model):
     deleted = models.BooleanField(default=False)
     name = models.CharField(blank=False, null=False, max_length=255)
     price = models.FloatField(null=False, blank=False)
-    space = models.CharField(blank=False, null=False, max_length=255)
+    space = models.IntegerField(blank=False, null=False)
