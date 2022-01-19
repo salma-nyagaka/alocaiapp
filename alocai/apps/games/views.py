@@ -27,34 +27,18 @@ class GamesApiView(generics.GenericAPIView):
 
 
 class PenDriveApiView(generics.GenericAPIView):
-    """ Class to get game values """
+    """Class to get game values"""
+
     renderer_classes = (RequestJSONRenderer,)
     # serializer_class = GameSerializer
 
     def post(self, request):
-        """ Method to get highest possible total value
-        that fits given pen-drive space """
+        """Method to get highest possible total value
+        that fits given pen-drive space"""
 
         params = request.query_params
         data = validate_params(params)
 
-
-            # serializer = self.serializer_class(data=data)
-            # serializer.is_valid(raise_exception=True)
-            # serializer.save()
-            # import pdb
-            # pdb.set_trace()
-        #     return_message = {
-        #         'message':
-        #         SUCCESS_MESSAGE.format("The game has been created"),
-        #         "data": "serializer.data"
-        #     }
-        #     return Response(data, status=status.HTTP_201_CREATED)
-        # except Exception as e:
-        # import pdb
-        # pdb.set_trace()
-        return_message = {
-            'message': data
-        }
-        return Response(return_message,
-        status=status.HTTP_400_BAD_REQUEST)
+        return_message = {"message": data}
+        return Response(
+            return_message, status=status.HTTP_400_BAD_REQUEST)
