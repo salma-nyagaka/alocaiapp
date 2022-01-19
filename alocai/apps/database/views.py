@@ -10,12 +10,11 @@ class DatabaseConnectionApiView(generics.GenericAPIView):
     def get(self, request):
         """Method to test and get database status
         after connecting"""
-        try:
-            "Some DB Code"
-            data = {"database": "healthy"}
-            return_message = {"message": data}
-            return Response(return_message, status=status.HTTP_200_OK)
-        except:
-            data = {"database": "unhealthy"}
-            return_message = {"message": data}
-            return Response(return_message, status=status.HTTP_400_BAD_REQUEST)
+        # try:
+        data = {"database": "healthy"}
+        return_message = {"message": data}
+        return Response(return_message, status=status.HTTP_200_OK)
+        # except:
+        #     data = {"database": "unhealthy"}
+        #     return_message = {"message": data}
+        #     return Response(return_message, status=status.HTTP_400_BAD_REQUEST)
