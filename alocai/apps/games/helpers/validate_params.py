@@ -14,9 +14,6 @@ def validate_params(params):
     final_data = []
 
     # check if key or value has been provided
-    # in params
-    # import pdb
-    # pdb.set_trace()
     if (not params) or ("pen_drive_space" not in params):
         raise ValidationError(
             error_dict["required"].format("pen_drive_space in params")
@@ -29,7 +26,7 @@ def validate_params(params):
         raise ValidationError(
             error_dict["positive"].format("pen_drive_space value in params")
         )
-    #     pass
+
     # If key has been provided then fetch records
     else:
         pen_drive_space = params["pen_drive_space"]
@@ -45,6 +42,8 @@ def validate_params(params):
 
     return response_data
 
+total_space = ''
+empty_space = ''
 
 def compute_space(data, space):
     """Compute space from the pen drive
@@ -55,8 +54,18 @@ def compute_space(data, space):
         raise ValidationError(error_dict["does_not_exist"].format(
             "Games records"))
     else:
+
+        # get the game space values that can fit
+        # to the pen drive
         sum_of_space = 0
+        items = []
+        global empty_space
+        global total_space 
         for db_data in data:
-            while sum_of_space < int(space):
-                sum_of_space = sum_of_space + db_data["space"]
-                print(sum_of_space)
+            sum_of_space = sum_of_space + db_data["space"]
+            if sum_of_space < int(space):
+                items.append(Game.objects.get(id=db_data['id']))
+        
+                empty_space = int(space) - sum_of_space
+                total_space = sum_of_space
+        return items, total_space, empty_space
