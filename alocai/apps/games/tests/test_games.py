@@ -16,6 +16,10 @@ class TestCreateGameApi(BaseTestCase):
     def test_create_order(self):
         """Test to create a game"""
 
-        response = self.client.post(self.create_game_url, data=self.payload, format="json")
-        response_data =  json.loads(response.content)
-        self.assertEqual(response_data['message'], "The game has been created successfully")
+        response = self.client.post(
+            self.create_game_url, data=self.payload, format="json"
+        )
+        response_data = json.loads(response.content)
+        self.assertEqual(
+            response_data["message"], "The game has been created successfully"
+        )
