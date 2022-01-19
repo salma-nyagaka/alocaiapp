@@ -45,7 +45,7 @@ A Django web application that ....
     ```
  
  #### Base url
-    http://alocai.sapplication.link/swagger/
+    http://alocai.sapplication.link/docs/
 
  #### Endpoints
 | REQUEST | DESCRIPTION  | URL  |
