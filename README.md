@@ -8,7 +8,7 @@ A Video Game  application
 A Django web application that ....
 
 ### Link to the documentation
- [Documentation](http://alocai.sapplication.link/swagger/)
+ [Documentation](http://alocai.sapplication.link/docs/)
 
 ### Development set up
 
@@ -45,7 +45,7 @@ A Django web application that ....
     ```
  
  #### Base url
-    http://alocai.sapplication.link/docs/
+    http://alocai.sapplication.link/
 
  #### Endpoints
 | REQUEST | DESCRIPTION  | URL  |
