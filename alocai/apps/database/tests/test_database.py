@@ -8,10 +8,9 @@ from database.apps import DatabaseConfig
 class TestDatabaseApi(BaseTestCase):
     """Class to test the db connectivity"""
 
-
     def test_apps(self):
-        """ Test apps file """
-        self.assertEqual(DatabaseConfig.name, 'database')
+        """Test apps file"""
+        self.assertEqual(DatabaseConfig.name, "database")
 
     def test_create_order(self):
         """Test if connection is successful"""

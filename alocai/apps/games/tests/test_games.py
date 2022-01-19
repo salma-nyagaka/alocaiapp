@@ -4,14 +4,13 @@ from rest_framework import status
 from .base_file import BaseTestCase
 from games.apps import GamesConfig
 
+
 class TestCreateGameApi(BaseTestCase):
     """Class to test the game API"""
 
-
     def test_apps(self):
-        """ Test apps file """
-        self.assertEqual(GamesConfig.name, 'games')
-
+        """Test apps file"""
+        self.assertEqual(GamesConfig.name, "games")
 
     def test_create_order(self):
         """Test to create a game"""
