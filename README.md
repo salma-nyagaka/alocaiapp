@@ -7,6 +7,8 @@ A Video Game  application
 ### Description
 A Django web application that ....
 
+### Link to the documentation
+| http://alocai.sapplication.link/swagger/ |
 
 ### Development set up
 
@@ -42,6 +44,10 @@ A Django web application that ....
     docker-compose up
     ```
  
+ #### Base url
+    ```
+    http://alocai.sapplication.link/swagger/
+    ```
 
  #### Endpoints
 | REQUEST | DESCRIPTION  | URL  |
