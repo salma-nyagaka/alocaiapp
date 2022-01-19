@@ -1,6 +1,6 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
-from .serializers import GameSerializer
+from .serializers import GameSerializer, GameValueSerializer
 from ...helpers.constants import SUCCESS_MESSAGE
 from ...helpers.renderers import RequestJSONRenderer
 
@@ -30,15 +30,22 @@ class PenDriveApiView(generics.GenericAPIView):
     """Class to get game values"""
 
     renderer_classes = (RequestJSONRenderer,)
-    # serializer_class = GameSerializer
+    serializer_class = GameValueSerializer
 
-    def post(self, request):
+    def get(self, request):
         """Method to get highest possible total value
         that fits given pen-drive space"""
 
         params = request.query_params
         data = validate_params(params)
+        serializer = self.serializer_class(data[0], many=True)
 
-        return_message = {"message": data}
-        return Response(
-            return_message, status=status.HTTP_400_BAD_REQUEST)
+        return_message = {
+            "message": SUCCESS_MESSAGE.format("The game values have been fetched"),
+            "data":{
+            "games": serializer.data,
+            "total_space": data[1],
+            "empty_space": data[2],
+            }
+        }
+        return Response(return_message, status=status.HTTP_200_OK)

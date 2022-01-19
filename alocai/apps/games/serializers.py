@@ -53,3 +53,15 @@ class GameSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "name": {"error_messages": {"blank": "Give yourself a username"}}
         }
+
+
+from rest_framework import serializers
+from rest_framework.validators import UniqueValidator
+from .models import Game
+
+
+class GameValueSerializer(serializers.ModelSerializer):
+    """Serialize a games data"""
+    class Meta:
+        model = Game
+        fields = ["name", "price", "space"]
