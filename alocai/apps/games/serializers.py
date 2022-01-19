@@ -27,7 +27,7 @@ class GameSerializer(serializers.ModelSerializer):
     # Ensure that price cannot be left be
     # blank and is a positive number
     price = serializers.RegexField(
-        regex='[+-]?([0-9]*[.])?[0-9]+',
+        regex='^(?:[1-9]\d*|0)?(?:\.\d+)?$',
         required=True,
         error_messages={
             "blank": "Price cannot be empty.",

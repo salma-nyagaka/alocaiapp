@@ -38,21 +38,6 @@ class PenDriveApiView(generics.GenericAPIView):
         params = request.query_params
         data = validate_params(params)
 
-
-            # serializer = self.serializer_class(data=data)
-            # serializer.is_valid(raise_exception=True)
-            # serializer.save()
-            # import pdb
-            # pdb.set_trace()
-        #     return_message = {
-        #         'message':
-        #         SUCCESS_MESSAGE.format("The game has been created"),
-        #         "data": "serializer.data"
-        #     }
-        #     return Response(data, status=status.HTTP_201_CREATED)
-        # except Exception as e:
-        # import pdb
-        # pdb.set_trace()
         return_message = {
             'message': data
         }
